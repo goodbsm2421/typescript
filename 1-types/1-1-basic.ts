@@ -36,4 +36,24 @@
     let person2: string | null;
     person2 = 'hi'
     person2 = null
+
+    // unknown
+    let notSure: unknown = 0; // 어떤타입인지 모를때 웬만하면 쓰지 않는것이 좋음
+    notSure =  'he';
+    notSure = true;
+
+    // any
+    let anything: any = 0; // 어떤것이든 담을 수 있는 변수 마찬가지로 쓰지 않는것이 좋음
+    anything = 'hello';
+
+    // void
+    function print():void { // 함수에서 아무런값도 리턴하지않으면 void // 어떤값을 리턴하는지 타입을 정해주는게 좋은 습관
+        console.log('hello');
+    }
+    // void는 함수에서만
+
+    // never
+    function throwError(message: string): never { // 마찬가지로 아무것도 리턴하지 않을 때 사용
+        throw new Error(message); // 1. 에러를 던질 때, 혹은 while문같은 리턴하는값이 없을 때 사용
+    }
 }
