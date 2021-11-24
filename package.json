@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint typescript/**/*.ts",
+    "lint:fix": "eslint --fix typescript/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,15 @@
   },
   "homepage": "https://github.com/goodbsm2421/typescript#readme",
   "dependencies": {
+    "eslint": "^8.3.0",
+    "prettier": "^2.4.1",
     "tsc-node": "^0.0.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0"
   }
 }
