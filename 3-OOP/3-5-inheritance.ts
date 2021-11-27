@@ -9,8 +9,8 @@
     }
 
     class CoffeeMachine implements CoffeeMaker {
-    static BEANS_GRAMM_PER_SHOT: number = 7  // class level
-    coffeeBeans: number = 0; // instance level
+    private static BEANS_GRAMM_PER_SHOT: number = 7  // class level
+    private coffeeBeans: number = 0; // instance level
 
     constructor(coffeeBeans: number) {
         this.coffeeBeans = coffeeBeans
@@ -33,7 +33,19 @@
             hasMilk: false,
         }
     }
+}
+    class CafeLatteMachine extends CoffeeMachine { // 상속을 위하여 extends를 사용
+        makeCoffee(shots: number): CoffeeCup {
+            const coffee = super.makeCoffee(shots) // parent class 에 있는 기능을 재사용하기위해 super 사용
+            return {
+                ...coffee,
+                hasMilk: true,
+            }
+        }
     }
-    const maker = new CoffeeMachine(32)
 
+    const machine = new CoffeeMachine(23);
+    const latteMachine = new CafeLatteMachine(23);
+    const coffee = latteMachine.makeCoffee(1);
+    console.log(coffee)
 }
