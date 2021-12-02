@@ -15,7 +15,7 @@
     }
 
     //generic 이용
-    function checkNotNullGeneric<T>(arg: T | null): T {
+    function checkNotNullGeneric<Type>(arg: Type | null): Type {
         if(arg === null) {
             throw new Error('not valid number!')
         }
