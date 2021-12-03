@@ -1,5 +1,5 @@
 {
-    interface Either<L, R> {
+    interface Either<L, R> { // generics 에선 LEFT RIGHT 보단 짧게 L, R
         left: () => L;
         right: () => R;
     }
