@@ -22,5 +22,6 @@
         return arg;
     }
     const number = checkNotNullGeneric(123);
+    const string = checkNotNullGeneric('hello');
     const boal: boolean = checkNotNullGeneric(true);
 }
