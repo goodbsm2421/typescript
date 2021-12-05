@@ -26,5 +26,5 @@
     console.log(maker)
 }
 
-// class 내에서는 let 이나 const 등을 쓰지 않는다.
+// class 내에서는 let 이나 const 등을 쓰지 않는다..
 // class 내에서 변수에 접근하기위해서는 변수앞에 항상 this. 을 붙여야한다.
