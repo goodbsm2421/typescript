@@ -3,8 +3,14 @@ type Video = {
     author: string;
 };
 
-type OptionalType<T> = {
-    
+type Optional<T> = {
+    [P in keyof T]?: T[P] // for...in
+}
+
+type VideoOptional = Optional<Video>
+const videoOp: VideoOptional = {
+    title: 'helli',
+    author: 'bsm',
 }
 // type VideoOptional = {
 //     title?: string;
