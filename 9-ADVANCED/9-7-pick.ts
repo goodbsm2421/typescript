@@ -17,7 +17,7 @@
         }
     }
 
-    function getVideoIdOrTitle(id: string): VideoMetaData {
+    function getVideoIdOrTitle(id: string): VideoMetaData { // id 와 title을 Pick 을 이용해서 가져온 후 리턴
         return {
             id,
             title: 'hi'
