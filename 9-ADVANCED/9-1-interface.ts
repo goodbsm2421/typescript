@@ -1,3 +1,5 @@
+{
+    
 type PositionType = {
     x: number;
     y: number;
@@ -55,3 +57,5 @@ type Person = {
 }
 
 type Name = Person['name']; 
+
+}
